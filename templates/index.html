@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['MBox', 'Users', { role: 'annotation' } ],
+          ['{{ mbox0 }}', {{ user0 }}, ''],
+          ['{{ mbox1 }}', {{ user1 }}, ''],
+          ['{{ mbox2 }}', {{ user2 }}, ''],
+          ['{{ mbox3 }}', {{ user3 }}, ''],
+          ['{{ mbox4 }}', {{ user4 }}, ''],
+          ['{{ mbox5 }}', {{ user5 }}, ''],
+          ['{{ mbox6 }}', {{ user6 }}, ''],
+          ['{{ mbox7 }}', {{ user7 }}, ''],
+          ['{{ mbox8 }}', {{ user8 }}, ''],
+          ['{{ mbox9 }}', {{ user9 }}, ''],
+          ['{{ mbox10 }}', {{ user10 }}, ''],
+          ['{{ mbox11 }}', {{ user11 }}, ''],
+          ['{{ mbox12 }}', {{ user12 }}, ''],
+          ['{{ mbox13 }}', {{ user13 }}, ''],
+          ['{{ mbox14 }}', {{ user14 }}, ''],
+          ['{{ mbox15 }}', {{ user15 }}, ''],
+          ['{{ mbox16 }}', {{ user16 }}, ''],
+          ['{{ mbox17 }}', {{ user17 }}, ''],
+          ['{{ mbox18 }}', {{ user18 }}, ''],
+          ['{{ mbox19 }}', {{ user19 }}, ''],
+          ['{{ mbox20 }}', {{ user20 }}, ''],
+          ['{{ mbox21 }}', {{ user21 }}, ''],
+          ['{{ mbox22 }}', {{ user22 }}, '']
+        ]);
+
+        var options = {
+        width: 800,
+        height: 600,
+        legend: { position: 'top', maxLines: 22 },
+        bar: { groupWidth: '75%' },
+        vAxis: { format: 'decimal' },
+        isStacked: true,
+      };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body>
+    <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
+  </body>
+</html>
